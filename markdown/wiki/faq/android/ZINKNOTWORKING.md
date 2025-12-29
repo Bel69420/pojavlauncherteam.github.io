@@ -1,10 +1,6 @@
 # Zink doesn't work
-If Zink worked for you before the `foxglove` update, this might get it running on your device. It doesn't help on devices which don't fulfill the base Zink requirements.
+If Zink does not working on your device, it's likely caused by :
 
-**/storage/emulated/0/Android/data/net.kdt.pojavlaunch/files/custom_env.txt**
-	(if this file does not exist, create it)
-
-```
-MESA_GL_VERSION_OVERRIDE=4.6
-MESA_GLSL_VERSION_OVERRIDE=460
-```
+1. Your phone doesn't have Vulkan driver
+2. Your Vulkan driver is buggy for zink to run
+3. (Adreno GPU only) you enabled "Use system Vulkan driver" option. If still crashing, your gpu model does not support by Turnip driver
